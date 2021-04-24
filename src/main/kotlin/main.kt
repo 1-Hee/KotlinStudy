@@ -40,6 +40,24 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     println(a_1)
     println(-- b_1)
 
+    val a_2 : Byte = 125
+    val b_2 : Short = (100+200)*100
+    val c : Int = 1243546538
+//    c = 0xFF_88_88
+//    c = 0b01010010_01100011_01110101_01000101
+    var d : Long = 1234
+
+//    c = a + b
+    d = c+ 10L // 정수 리터럴 뒤에 :을 붙이면 그리터럴은 수의 크기에 상관없이 무조건 Long 타입이 됨.
+    var e : Float = 67.6f
+    val f : Double = 658.456
+    e = (e+f).toFloat()
+    println(e)
+
+
+
+
+
 
 
 }
