@@ -54,6 +54,8 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     e = (e+f).toFloat()
     println(e)
 
+    println("안녕하세요 나는 조원희 입니다.")
+
 
 
 
