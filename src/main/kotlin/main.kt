@@ -1,3 +1,5 @@
+typealias Number = Int
+
 // Kotlin에서 fun=함수 를 의미함, java와 달리 class가 필요가 없어서 Hello world를 출력할때도 훨씬 깔끔한 것이 특징임.
 fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 코틀린의 구조(함수)이다.
     println("Hello World!") // Kotlin에서는 ;이 필수가 아니다, 붙여도 출력되고 없어도 출력된다. 세미콜론(;)은 주로 한문장에 두개 이상 쓸대 사용.
@@ -54,8 +56,7 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     e = (e+f).toFloat()
     println(e)
 
-    println("안녕하세요 나는 조원희 입니다.")
-
+    //chap 10.
 
     // 실수타입에서 예를 들어 0.1을 3번 더하는 코드를 다음과 같이 만들었다고 해보자,
     println(0.1f + 0.1f + 0.1f)
@@ -67,15 +68,18 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     // 소수점이 정확히 나누어 떨어지지 않는 무한소수가 되기 때문에 표현할 수 있는 범위에서 가장 근사한 값인 0.1000~~으로 바뀌어 저장된다.
     // 따라서 잘못된 값을 저장하게 되는데, 그렇지 않더라도 가끔 운이 좋은 경우에는 제대로 표현되기도 한다.
 
+    // chap 10.
 
     var ch:Char = 'A'
     println(ch)
 
-    ch = '\uAC00' // 문자 변수에 코드를 넣어서 글자를 나타나게 하는 것이 가능.
+    ch = '\uAC00' // 문자 변수에 코드를 넣어서 글자를 나타나게 하는 것이 가능., 코틀린에서는 [유니코드]를 사용함.
     println(ch)
 
     ch = '한'
     println(ch.toInt()) // 문자를 숫자값으로 변환 가능.
+
+    //chap 11.
 
     var str : String = "Hello"
     println(str)
@@ -87,6 +91,52 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     val num1 = 10*5+3
     println(str+num1)
+
+     // chap 12.
+
+    val a2 = 10
+    val b2 = 20
+    println("a의 값은 : $a2 ") // 출력하는 문자열 사이에 $+변수명을 포함시키면 해당 변수의 값으로 바뀐다.
+    println("b의 값은 : $b2 ")
+    println("a+b = ${a2+b2}") // 또한 중괄호를 통해서 여러 변수 사이의 사칙연산한 뒤의 값으로 치환 가능하다.
+
+    // chap 13.
+    // fun위에 참조.    typealias Number = Int으로 이미 존재하는ㅌ ㅏ입에 별명을 붙일 수 있음.
+
+    val a3 : Number = 10 // 원래는 Int로 타입을 설정해주어야 하지만, fun위에 typealias로 별명을 지정을 하였기에 Number가 Int로써 작동하였다.
+    println(a3)
+
+    //chap 15. 배정연산자
+
+    var G : Int
+    var H : Int
+
+    G = 10+5
+    H = 10
+
+    G = 10 + 5
+    H = 10
+
+    H += G // H값에 G를 누적
+    println(H)
+
+    H %= 3 // H를 3으로 나눈 나머지를 H에 저장
+    println(H)
+
+
+    // cahp 16. 문장
+    // 문장은 독립적으로 실행할 수 있는 코틀린 코드의 "조각"을 의미함.
+
+    val NAM : Int
+    NAM = 15
+
+    println(
+        NAM + 7 * 3
+    )
+
+    //위의 코드에서 문장은 총 3개이다.
+
+    
 
 
 
