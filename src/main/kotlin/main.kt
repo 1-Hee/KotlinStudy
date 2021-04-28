@@ -1,3 +1,5 @@
+import javax.swing.text.StyledEditorKit
+
 typealias Number = Int
 
 // Kotlin에서 fun=함수 를 의미함, java와 달리 class가 필요가 없어서 Hello world를 출력할때도 훨씬 깔끔한 것이 특징임.
@@ -135,6 +137,81 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     )
 
     //위의 코드에서 문장은 총 3개이다.
+
+    //chap 17. 비교연산자
+
+    a == b // a=b면 true, 아니면 false
+    a != b // a=b면 false, 아니면 true
+    a > b // a>b면 true, 아니면 false
+    a < b // a<b면 true, 아니면 false
+    a >= b // a가 b보다 크거나 같으면 true, 아니면 false
+    a <= b // a가 b보다 작거나 같으면 true, 아니면 false
+
+    var isRight:Boolean = (10+70) > (3*25)
+    println(isRight)
+
+    isRight = false
+    println(isRight)
+
+    isRight = 30 == (10+20)
+    println(isRight)
+
+    isRight = 0.00001f ==0.005f*0.0002f
+    println(isRight)
+
+    isRight = 3.0 * 5 +2.7 <=16
+    println(isRight)
+
+    // 비교연산자의 결과값의 타입은 Boolean임
+
+    //chap 18. 논리연산자
+
+    // 논리연산자 3대장
+    // 1) && : a와 b가 모두 true면 true, 하나라도 false면 false
+    // 2) || : a와 b중 둘중 하나라도 true면 true, 둘다 false면 false
+    // 3) !a : a가 ture면 결과값은 false, a가 false면 결과값은 true
+
+    val ae = 15
+    val be = 17
+
+    var bool : Boolean = (a-b < a+b) && (a == 15)
+    println(bool)
+    bool =!((ae+be)>(ae*3)||(be-ae)>0)
+    println(bool)
+
+    bool =!((a+b)>(a*3)||(b-a)>0)
+    println(bool)
+
+    // chap 19. 흐름제어 - 조건문(if)
+
+    var az = 15
+    val bz = 11
+    if(a>b) {
+        println("if안으로 들어옴")
+        az-=bz // az의 값에 bz값을 뺀 다음 그 값을 az에 넣으시오.
+    }
+
+    println(az)
+
+    // 만약 if문 뒤의 문장이 1개일경우, 중괄호({})를 생략할 수 있다.
+
+    val ax = 10
+    val bx = 5
+    if (ax<bx)
+        println("if")
+        else
+            println("else")
+
+        if (ax>bx)
+            println("a가 크다")
+            else
+                println("b는 a 이상이다")
+
+
+
+
+
+
 
     
 
