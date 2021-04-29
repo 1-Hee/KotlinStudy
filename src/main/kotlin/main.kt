@@ -195,6 +195,8 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     // 만약 if문 뒤의 문장이 1개일경우, 중괄호({})를 생략할 수 있다.
 
+    //chap 20. if문
+
     val ax = 10
     val bx = 5
     if (ax<bx)
@@ -206,6 +208,81 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
             println("a가 크다")
             else
                 println("b는 a 이상이다")
+
+    //chap 21. if와 else의 중첩
+
+    val score = 88
+    if(score >= 90)
+    {
+        println('A')
+    }
+    else
+    {
+        if (score >= 80 )
+        {
+            println('B')
+        }
+        else
+        {
+            if (score >= 70)
+            {
+                println('C')
+            }
+            else
+            {
+                println('F')
+            }
+        }
+    }
+
+    //chap 22. if-else를 표현식으로 상요하기
+
+    val value:Int = if(10>5){
+        println("10은 5보다 크다")
+        10
+    }
+    else
+    {
+        println("10은 5보다 크지 않다.")
+        5
+    }
+    println(value)
+
+    // chap 23. 흐름제어 조건문, When
+    val scoreA = 64
+    when ( scoreA / 10) {
+        6 -> {println('D')}
+        7 -> {println('C')}
+        8 -> {
+            println('B')}
+        9, 10 -> {
+            println('A')}
+        else -> {println('F')}
+    }
+
+    println("test")
+
+    // when은 java의 [switch-case]를 훨씬 업그레이드한 버전임.
+
+    // chap 24. when을 표현식으로 사용하기
+    val scoreB = 95
+
+    val grade : Char = when (scoreB / 10)
+    {
+        6 -> 'D'
+        7 -> 'C'
+        8 -> 'B'
+        9, 10 -> 'A'
+        else -> 'F'
+    }
+
+    println(grade)
+
+
+
+
+
+
 
 
 
