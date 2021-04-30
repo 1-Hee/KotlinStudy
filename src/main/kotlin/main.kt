@@ -279,6 +279,22 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     println(grade)
 
 
+    //chap 25. 흐름 제어 - 반복문 while
+    var i = 1
+    while (i < 10)
+    {
+        println(i)
+        i += 1
+    }
+
+
+
+
+
+
+
+
+
 
 
 
