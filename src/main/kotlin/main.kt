@@ -4,33 +4,34 @@ typealias Number = Int
 
 // Kotlin에서 fun=함수 를 의미함, java와 달리 class가 필요가 없어서 Hello world를 출력할때도 훨씬 깔끔한 것이 특징임.
 fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 코틀린의 구조(함수)이다.
+
     println("Hello World!") // Kotlin에서는 ;이 필수가 아니다, 붙여도 출력되고 없어도 출력된다. 세미콜론(;)은 주로 한문장에 두개 이상 쓸대 사용.
 
-    53+62-126 // Kotlin에서는 단순히 숫자만 이용해 연산을 해도 연산은 가능함.
+    53 + 62 - 126 // Kotlin에서는 단순히 숫자만 이용해 연산을 해도 연산은 가능함.
 
-    println(53+62-126)
+    println(53 + 62 - 126)
 
 
-    var total:Int // Kotlin의 변수선언형식, [ 변수(var) 변수이름 : 변수타입(Int 등) ] 으로 함
+    var total: Int // Kotlin의 변수선언형식, [ 변수(var) 변수이름 : 변수타입(Int 등) ] 으로 함
     total = 0 // 변수에 값을 넣을 때에는 [ 변수 = 0 ]의 형식으로 값을 넣어두면 됨.
 
-    val a:Int = 10+53-7
+    val a: Int = 10 + 53 - 7
     println(a)
 
-    val b : Int = 43+75+a
+    val b: Int = 43 + 75 + a
     println(b)
 
-    total = a+b
+    total = a + b
     println(total)
 
 
     var variable = 10 + 12 - 5 // 다음과 같이 Int를 제외하고 바로 피연산자를 연산자로 계산한 값을 넣어서 출력 가능.
     println(variable)
 
-    var num : Int = 15-4*3
-    var num2 : Int = 65%7
-    var num3 : Double = 7.5/5 +22.25
-    var num4 : Double = num / num2 + 0.7
+    var num: Int = 15 - 4 * 3
+    var num2: Int = 65 % 7
+    var num3: Double = 7.5 / 5 + 22.25
+    var num4: Double = num / num2 + 0.7
 
     println(num)
     println(num2)
@@ -42,20 +43,20 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     println(a_1++ + b_1)
     println(a_1)
-    println(-- b_1)
+    println(--b_1)
 
-    val a_2 : Byte = 125
-    val b_2 : Short = (100+200)*100
-    val c : Int = 1243546538
+    val a_2: Byte = 125
+    val b_2: Short = (100 + 200) * 100
+    val c: Int = 1243546538
 //    c = 0xFF_88_88
 //    c = 0b01010010_01100011_01110101_01000101
-    var d : Long = 1234
+    var d: Long = 1234
 
 //    c = a + b
-    d = c+ 10L // 정수 리터럴 뒤에 :을 붙이면 그리터럴은 수의 크기에 상관없이 무조건 Long 타입이 됨.
-    var e : Float = 67.6f
-    val f : Double = 658.456
-    e = (e+f).toFloat()
+    d = c + 10L // 정수 리터럴 뒤에 :을 붙이면 그 리터럴은 수의 크기에 상관없이 무조건 Long 타입이 됨.
+    var e: Float = 67.6f
+    val f: Double = 658.456
+    e = (e + f).toFloat()
     println(e)
 
     //chap 10.
@@ -72,7 +73,7 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     // chap 10.
 
-    var ch:Char = 'A'
+    var ch: Char = 'A'
     println(ch)
 
     ch = '\uAC00' // 문자 변수에 코드를 넣어서 글자를 나타나게 하는 것이 가능., 코틀린에서는 [유니코드]를 사용함.
@@ -83,37 +84,37 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     //chap 11.
 
-    var str : String = "Hello"
+    var str: String = "Hello"
     println(str)
 
-    str = str +"\n Kotlin!"
+    str = str + "\n Kotlin!"
     println(str)
 
     println(str[8])
 
-    val num1 = 10*5+3
-    println(str+num1)
+    val num1 = 10 * 5 + 3
+    println(str + num1)
 
-     // chap 12.
+    // chap 12.
 
     val a2 = 10
     val b2 = 20
     println("a의 값은 : $a2 ") // 출력하는 문자열 사이에 $+변수명을 포함시키면 해당 변수의 값으로 바뀐다.
     println("b의 값은 : $b2 ")
-    println("a+b = ${a2+b2}") // 또한 중괄호를 통해서 여러 변수 사이의 사칙연산한 뒤의 값으로 치환 가능하다.
+    println("a+b = ${a2 + b2}") // 또한 중괄호를 통해서 여러 변수 사이의 사칙연산한 뒤의 값으로 치환 가능하다.
 
     // chap 13.
     // fun위에 참조.    typealias Number = Int으로 이미 존재하는ㅌ ㅏ입에 별명을 붙일 수 있음.
 
-    val a3 : Number = 10 // 원래는 Int로 타입을 설정해주어야 하지만, fun위에 typealias로 별명을 지정을 하였기에 Number가 Int로써 작동하였다.
+    val a3: Number = 10 // 원래는 Int로 타입을 설정해주어야 하지만, fun위에 typealias로 별명을 지정을 하였기에 Number가 Int로써 작동하였다.
     println(a3)
 
     //chap 15. 배정연산자
 
-    var G : Int
-    var H : Int
+    var G: Int
+    var H: Int
 
-    G = 10+5
+    G = 10 + 5
     H = 10
 
     G = 10 + 5
@@ -129,7 +130,7 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     // cahp 16. 문장
     // 문장은 독립적으로 실행할 수 있는 코틀린 코드의 "조각"을 의미함.
 
-    val NAM : Int
+    val NAM: Int
     NAM = 15
 
     println(
@@ -147,19 +148,19 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     a >= b // a가 b보다 크거나 같으면 true, 아니면 false
     a <= b // a가 b보다 작거나 같으면 true, 아니면 false
 
-    var isRight:Boolean = (10+70) > (3*25)
+    var isRight: Boolean = (10 + 70) > (3 * 25)
     println(isRight)
 
     isRight = false
     println(isRight)
 
-    isRight = 30 == (10+20)
+    isRight = 30 == (10 + 20)
     println(isRight)
 
-    isRight = 0.00001f ==0.005f*0.0002f
+    isRight = 0.00001f == 0.005f * 0.0002f
     println(isRight)
 
-    isRight = 3.0 * 5 +2.7 <=16
+    isRight = 3.0 * 5 + 2.7 <= 16
     println(isRight)
 
     // 비교연산자의 결과값의 타입은 Boolean임
@@ -174,21 +175,21 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     val ae = 15
     val be = 17
 
-    var bool : Boolean = (a-b < a+b) && (a == 15)
+    var bool: Boolean = (a - b < a + b) && (a == 15)
     println(bool)
-    bool =!((ae+be)>(ae*3)||(be-ae)>0)
+    bool = !((ae + be) > (ae * 3) || (be - ae) > 0)
     println(bool)
 
-    bool =!((a+b)>(a*3)||(b-a)>0)
+    bool = !((a + b) > (a * 3) || (b - a) > 0)
     println(bool)
 
     // chap 19. 흐름제어 - 조건문(if)
 
     var az = 15
     val bz = 11
-    if(a>b) {
+    if (a > b) {
         println("if안으로 들어옴")
-        az-=bz // az의 값에 bz값을 뺀 다음 그 값을 az에 넣으시오.
+        az -= bz // az의 값에 bz값을 뺀 다음 그 값을 az에 넣으시오.
     }
 
     println(az)
@@ -199,37 +200,28 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     val ax = 10
     val bx = 5
-    if (ax<bx)
+    if (ax < bx)
         println("if")
-        else
-            println("else")
+    else
+        println("else")
 
-        if (ax>bx)
-            println("a가 크다")
-            else
-                println("b는 a 이상이다")
+    if (ax > bx)
+        println("a가 크다")
+    else
+        println("b는 a 이상이다")
 
     //chap 21. if와 else의 중첩
 
     val score = 88
-    if(score >= 90)
-    {
+    if (score >= 90) {
         println('A')
-    }
-    else
-    {
-        if (score >= 80 )
-        {
+    } else {
+        if (score >= 80) {
             println('B')
-        }
-        else
-        {
-            if (score >= 70)
-            {
+        } else {
+            if (score >= 70) {
                 println('C')
-            }
-            else
-            {
+            } else {
                 println('F')
             }
         }
@@ -237,12 +229,10 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     //chap 22. if-else를 표현식으로 상요하기
 
-    val value:Int = if(10>5){
+    val value: Int = if (10 > 5) {
         println("10은 5보다 크다")
         10
-    }
-    else
-    {
+    } else {
         println("10은 5보다 크지 않다.")
         5
     }
@@ -250,14 +240,22 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     // chap 23. 흐름제어 조건문, When
     val scoreA = 64
-    when ( scoreA / 10) {
-        6 -> {println('D')}
-        7 -> {println('C')}
+    when (scoreA / 10) {
+        6 -> {
+            println('D')
+        }
+        7 -> {
+            println('C')
+        }
         8 -> {
-            println('B')}
+            println('B')
+        }
         9, 10 -> {
-            println('A')}
-        else -> {println('F')}
+            println('A')
+        }
+        else -> {
+            println('F')
+        }
     }
 
     println("test")
@@ -267,8 +265,7 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     // chap 24. when을 표현식으로 사용하기
     val scoreB = 95
 
-    val grade : Char = when (scoreB / 10)
-    {
+    val grade: Char = when (scoreB / 10) {
         6 -> 'D'
         7 -> 'C'
         8 -> 'B'
@@ -281,37 +278,69 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     //chap 25. 흐름 제어 - 반복문 while
     var i = 1
-    while (i < 10)
-    {
+    while (i < 10) {
         println(i)
         i += 1
     }
 
 
+    // chap 26. 흐름제어 - 반복문 - do while
+
+    var j = 1
+    do {
+        println("실행됨")
+    } while (j == 0)
+
+    // 변수 j를 선언함과 동시에 초기화하고 있다.
+    // 조건을 검사하는 부분이 맨 뒤로 옮겨졌으므로 do-while 블록이 적어도 한번은 무조건 실행된다.
+    // while의 조건이 false이므로  do-while을 반복하지 않고 빠져나온다, 만약 조건이 true였다면, 다시 5번줄("println()")으로 실행흐름이 되돌아간다.
 
 
+    // chap 27. 흐름제어 - continue
+
+    var k = 0
+    while (k < 0) {
+        k += 1
+        if (k % 2 == 0) // 짝수이면
+            continue // continue이면 아래의 문장들을 모두 skip 한다. = 아래의 명령문을 실행하지 않는다.
+        print(k)
+    }
 
 
+    // chap 28. 흐름제어 break
 
+    var l = 0
+    while (true) {
+        l += 1
+        if (l >= 5)
+            break // 이문장이 실행되는 순간 while 블록을 탈출한다.
+        println(l)
+    }
 
+    // chap 29. Label
 
+    var x = 0
+    var y = 0
 
+    while (x <= 20) {
+        y = 0
+        while (y <= 20) {
+            if (x + y == 15 && x - y == 5)
+                break
+            y += 1
+        }
+        x += 1
+    }
 
+    println("x:$x, Y:$y")
 
-
-
-
-
-
-
-
-
-    
-
-
+    // break는 반복문을 빠져나올때 가장 가까운 반복문 '하나만'을 빠져나온다,
+    // 코틀린은 레이블(Label)이라는 문법을 제공하여 이와 같은 문제를 해결할 수 있도록 해준다.
 
 
 
 
 
 }
+
+
