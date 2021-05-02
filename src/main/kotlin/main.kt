@@ -338,9 +338,28 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     // 코틀린은 레이블(Label)이라는 문법을 제공하여 이와 같은 문제를 해결할 수 있도록 해준다.
 
 
+    // chap 31. 매개변수와 인수
 
-
+        println(cToF(30))
+        println(getAverage(89, 96))
 
 }
+
+fun getAverage(ai: Int, bi: Int): Double {
+    return (ai + bi )/ 2.0
+
+}
+
+fun cToF(celsius:Int): Double {
+    return celsius * 1.8 + 32
+
+}
+
+// 첫번째줄 cToF는 화씨온도를 계산하는 함수이다. 이때 cToF안의 변수 celsius는 본 함수의 매개변수이고, celsius를 계산하기 위해 사용된 숫자 "30"은 인수이다.
+// 어떤 함수에서 수학식을 사용하 계산하는 것을 구현할 때에는, 매개변수와 인수의 타입(Int인지, Double인지)이 서로 같아야 한다.
+// 기본적으로 함수는 코틀린을 처음 실행하고 보통 자동으로 입력된 fun main~ 이외에 fun ~~ 등의 형식을 통해서 특정 기능을 갖는 함수를 변수 하나로
+// 축약하여 메인 함수에서의 응용이 가능하게 해주므로, 코딩을 할 때에 굉장이 유용한 기능 중 하나이다.
+
+
 
 
