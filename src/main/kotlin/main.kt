@@ -343,6 +343,13 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
         println(cToF(30))
         println(getAverage(89, 96))
 
+
+    //
+
+    celsiustoFah(27)
+
+
+
 }
 
 fun getAverage(ai: Int, bi: Int): Double {
@@ -359,6 +366,13 @@ fun cToF(celsius:Int): Double {
 // 어떤 함수에서 수학식을 사용하 계산하는 것을 구현할 때에는, 매개변수와 인수의 타입(Int인지, Double인지)이 서로 같아야 한다.
 // 기본적으로 함수는 코틀린을 처음 실행하고 보통 자동으로 입력된 fun main~ 이외에 fun ~~ 등의 형식을 통해서 특정 기능을 갖는 함수를 변수 하나로
 // 축약하여 메인 함수에서의 응용이 가능하게 해주므로, 코딩을 할 때에 굉장이 유용한 기능 중 하나이다.
+
+fun celsiustoFah(i: Int):Unit {
+    val celsius = 27
+    println(celsius *1.8+32)
+}
+
+
 
 
 
