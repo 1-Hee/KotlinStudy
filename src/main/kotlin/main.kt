@@ -1,3 +1,4 @@
+import java.util.*
 import javax.swing.text.StyledEditorKit
 
 typealias Number = Int
@@ -346,9 +347,29 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     //
 
+    // chap 32. unit 타입
+    // celsiustoFah 에서 바로 계산결과를 println으로 출력하도록 수정했다. 이런 구조를 취하면 함수에서 굳이 값을 반환해줄 필요가 없다.
+
     celsiustoFah(27)
 
 
+    // chap 33. 디폴트 인수
+
+   println(getAverage(89, 96))
+    getAverage(100, 50)
+    println(getAverage(90))
+    getAverage(66, print = true)
+    getAverage(print=true)
+    getAverage(print=true, M= 10, N= 30)
+
+
+}
+
+fun getAverage(M:Int=0, N:Int=0, print:Boolean = false): Double {
+    val result = (M+N)/2.0
+    if(print)
+        println(result)
+    return result
 
 }
 
