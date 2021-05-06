@@ -362,10 +362,35 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     getAverage(print=true)
     getAverage(print=true, M= 10, N= 30)
 
+    // 매개변수를 선언과 동시에 초기화하고 있음. 이렇게 하면 함수 호출시 해당 매개변수에 인수를 지정하지 않아도 됨.
+
+
+    // chap 34. 가변인수
+
+    println("이 아래부터 34장입니다.")
+    println(getSumOf(1,2,3,4,5,6,7))
+    println(getSumOf(32, 57, 12))
+    println(getSumOf())
+
 
 }
 
-fun getAverage(M:Int=0, N:Int=0, print:Boolean = false): Double {
+fun getSumOf(vararg numbers:Int): Int { // chap 34.
+    // 매개변수 앞에 vararg 키워드를 붙이면 여러 개의 인수를 받을 수 있게 됨.
+
+    val count = numbers.size
+    // count에 인수의 개수를 저장, size의 데이터 타입은 Int 이다.
+    var i = 0; var sum = 0
+    //변수 i를 선언함과 동시에 0으로 초기화하고 있음.
+
+    while (i < count) {
+        sum += numbers[i] // sum에 가변 매개변수 numbers에 들어있는 값들을 누적함.
+        i += 1
+    }
+    return  sum
+}
+
+fun getAverage(M:Int=0, N:Int=0, print:Boolean = false): Double { // chap 33.
     val result = (M+N)/2.0
     if(print)
         println(result)
@@ -373,12 +398,12 @@ fun getAverage(M:Int=0, N:Int=0, print:Boolean = false): Double {
 
 }
 
-fun getAverage(ai: Int, bi: Int): Double {
+fun getAverage(ai: Int, bi: Int): Double { //chap 32
     return (ai + bi )/ 2.0
 
 }
 
-fun cToF(celsius:Int): Double {
+fun cToF(celsius:Int): Double { //chap 31
     return celsius * 1.8 + 32
 
 }
