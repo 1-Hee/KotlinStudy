@@ -388,6 +388,23 @@ fun getSumOf(vararg numbers:Int): Int { // chap 34.
         i += 1
     }
     return  sum
+
+    // Chap 35.
+
+    println()
+    // Ctrl을 누른채로 println()의 println부분을 클릭하면 Console.kt로 이동함.
+    // println()도 함수의 일종임
+    // Console.kt로 이동하면 다음과 같은 코드가 나오게 되는데,
+
+// @kotlin.internal.InlineOnly <<- 어노테이션이라고 부르는 부위임.
+    //  public actual inline fun println() {
+    //    System.out.println()
+
+    // println의 소스코드를 자세히 보면 매개변수 타입만 다르고, 함수의 이름은 모두 println인 것을 확인 가능하다.
+    // 코틀린에서는 함수 시그니처가 다르기만 하면 함수 이름의 중복을 허용한다.
+    // 이렇게 이름이 같은 함수를 여러개 선언하는것 = 함수 오버로딩이라고 한다.
+    // 단, 반환타입은 서로 달라야한다, 예를들어 시그니쳐가 (Int, Double) -> Unit 인 함수와 (Int, Double) → Int인 함수는 오버로딩이 불가능하다.
+
 }
 
 fun getAverage(M:Int=0, N:Int=0, print:Boolean = false): Double { // chap 33.
