@@ -2,6 +2,7 @@ import java.util.*
 import javax.swing.text.StyledEditorKit
 
 typealias Number = Int
+var county = 0
 
 // Kotlin에서 fun=함수 를 의미함, java와 달리 class가 필요가 없어서 Hello world를 출력할때도 훨씬 깔끔한 것이 특징임.
 fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 코틀린의 구조(함수)이다.
@@ -372,6 +373,19 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     println(getSumOf(32, 57, 12))
     println(getSumOf())
 
+    //chap 36. 지역변수와 전역변수
+
+    println("36장")
+
+    val ah = 15
+    println(ah) // 블록 안에서 선언한 변수는 블록 밖으로 나가면 사라진다(함수의 매개변수도 포함)
+    // 이렇게 블록 안에서 선언된 변수를 지역변수(Local Variable)라고 한다.
+
+    county +=1
+    printCount() // 함수의 밖에서 함수를 선언하고 있다. 이렇게 함수 밖에서 선언한 변수는 함수 호출이 끝나도 사라지지 않는다.
+    // 이처럼 함수 밖에서 선언한 변수를 전역변수(Global Variable)이라고 한다.
+    println(county)
+
 
 }
 
@@ -405,6 +419,11 @@ fun getSumOf(vararg numbers:Int): Int { // chap 34.
     // 이렇게 이름이 같은 함수를 여러개 선언하는것 = 함수 오버로딩이라고 한다.
     // 단, 반환타입은 서로 달라야한다, 예를들어 시그니쳐가 (Int, Double) -> Unit 인 함수와 (Int, Double) → Int인 함수는 오버로딩이 불가능하다.
 
+}
+
+fun printCount() {
+    println(county) // 함수를 메인함수 밖에서 선언한 것이다.
+    county += 1
 }
 
 fun getAverage(M:Int=0, N:Int=0, print:Boolean = false): Double { // chap 33.
