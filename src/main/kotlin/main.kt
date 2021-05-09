@@ -2,7 +2,8 @@ import java.util.*
 import javax.swing.text.StyledEditorKit
 
 typealias Number = Int
-var county = 0
+var county = 0 //chap 36.
+var ak = 5 //chap 37.
 
 // Kotlin에서 fun=함수 를 의미함, java와 달리 class가 필요가 없어서 Hello world를 출력할때도 훨씬 깔끔한 것이 특징임.
 fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 코틀린의 구조(함수)이다.
@@ -387,6 +388,18 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     println(county)
 
 
+    val ak = 30 // 메인함수 위에 var ak = 5로 전역변수를 선언했다. 하지만, 코틀린에서는 전역변수와 지역변수간에 이름중복을 허용하므로 오류는 발생하지 않는다.
+    println(ak) // 변수 ak 값을 출력할때, 현재 실행되고 있는 코드와 가장 가까운 스코프의 변수 즉 main함수의 변수가 우선적으로 인식된다.
+    // 때문에 ak라는 식별자를 적으면 메인함수의 ak로 인식한다. >> 지역변수 ak = 30이 출력된다.
+    func() // 이 경우 스코프에 걸리는 ak 변수가 전역변수 ak 뿐이므로 전역변수 ak = 5가 출력된다.
+
+
+
+
+}
+
+fun func() { // chap 37.
+    println(ak)
 }
 
 fun getSumOf(vararg numbers:Int): Int { // chap 34.
