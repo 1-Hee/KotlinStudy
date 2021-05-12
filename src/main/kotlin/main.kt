@@ -416,6 +416,17 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
 
     // 주석처리된 위의 프로그램을 주석을 풀어보면 바로 윗 프로그램에서 지역변수가 겹치므로 빨간색 밑줄이 생기고 충돌(오류)가 발생한다.
 
+
+
+    // chap 39. 지역함수
+    fun printFomular(a:Int, b:Int) // 크게보면 fun main 함수에 안긴 형태의 지역함수를 선언한다, 변수로는 a와 b가 있고 Int 타입이다.
+    {
+        println(a*b + a-b) // 입력받은 변수에 대한 연산을 수행한다
+    }
+    println("--39장--")
+    printFomular(73, 1) // println()처럼 main 함수에서 간단히 인수만 함수안에 추가하여 연산가능하다.
+    printFomular(4, 6)
+
 }
 
 fun printA2() { // chap 38.
