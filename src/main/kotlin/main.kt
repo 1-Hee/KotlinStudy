@@ -417,7 +417,6 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     // 주석처리된 위의 프로그램을 주석을 풀어보면 바로 윗 프로그램에서 지역변수가 겹치므로 빨간색 밑줄이 생기고 충돌(오류)가 발생한다.
 
 
-
     // chap 39. 지역함수
     fun printFomular(a:Int, b:Int) // 크게보면 fun main 함수에 안긴 형태의 지역함수를 선언한다, 변수로는 a와 b가 있고 Int 타입이다.
     {
@@ -426,6 +425,26 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     println("--39장--")
     printFomular(73, 1) // println()처럼 main 함수에서 간단히 인수만 함수안에 추가하여 연산가능하다.
     printFomular(4, 6)
+
+    //chap 40. 메모리의 스택(Stack) 영역
+    println("--40장--")
+    val aX = -36
+    val resultss = ablsolute(aX)
+    println(resultss)
+
+    // 이번 강좌에서는 징겨변수가 어디에 어떤 모습으로 생성되는지 알아보자
+    // 메모리에는 Stack이라고 하는 영역이 있다. 이곳에 지역변수가 저장된다.
+    // 스텍은 쌓아올리다는 뜻으로 변수가 생성될 때 생성된 순서대로 차곡차곡 쌓이기 때문이 이런 이름이 붙었다.
+    // val 부터 시작하여 각각의 줄별로 변수 스택에 값이 저장된다. 줄이 실행될때마다 스택에 저장된 변수가 함수에서의 사용이 종료되면 휘발되는데,
+    // 그리하여 최종적으로 변수에 저장된 값인 36이 출력된다.
+
+}
+
+fun ablsolute(number: Int): Int { // chap 40.
+
+    return if (number >= 0)
+        number
+    else -number
 
 }
 
@@ -472,6 +491,7 @@ fun getSumOf(vararg numbers:Int): Int { // chap 34.
     // 코틀린에서는 함수 시그니처가 다르기만 하면 함수 이름의 중복을 허용한다.
     // 이렇게 이름이 같은 함수를 여러개 선언하는것 = 함수 오버로딩이라고 한다.
     // 단, 반환타입은 서로 달라야한다, 예를들어 시그니쳐가 (Int, Double) -> Unit 인 함수와 (Int, Double) → Int인 함수는 오버로딩이 불가능하다.
+
 
 }
 
