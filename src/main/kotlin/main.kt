@@ -1,6 +1,9 @@
 import java.util.*
 import javax.swing.text.StyledEditorKit
 
+import ex_package.max
+import ex_package.min
+
 typealias Number = Int
 var county = 0 //chap 36.
 var ak = 5 //chap 37.
@@ -449,7 +452,14 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     println(max(aG, abs(bG)))
 
     // 본 예제처럼 서로 관련 있는 함수끼리 묶어 하나의 파일로 추출해두면, 나중에 관리하기 편함.
-    // 또한 프로그램을 개발하다가 수확 관련 함수가 필요할 때 Math.kt 파일만 복사해 프로젝트에 추가하기만 하면 되므로 소스코드 재사용도 쉽니다.
+    // 또한 프로그램을 개발하다가 수확 관련 함수가 필요할 때 Math.kt 파일만 복사해 프로젝트에 추가하기만 하면 되므로 소스코드 재사용도 쉽다.
+
+    //chap 44. import
+    println("--44장--")
+    println(max(55, 47))
+    println(min(3,10))
+
+    // import 를 통해 함수를 불러와서 손쉽게 한줄의 코드로 사용 가능하다.
 
 
 
