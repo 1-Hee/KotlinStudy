@@ -3,10 +3,12 @@ import javax.swing.text.StyledEditorKit
 
 import ex_package.max
 import ex_package.min
+import people.People
 
 typealias Number = Int
 var county = 0 //chap 36.
 var ak = 5 //chap 37.
+
 
 // Kotlin에서 fun=함수 를 의미함, java와 달리 class가 필요가 없어서 Hello world를 출력할때도 훨씬 깔끔한 것이 특징임.
 fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 코틀린의 구조(함수)이다.
@@ -521,8 +523,41 @@ fun main(args: Array<String>):Unit { // 왼쪽의 형식이 가장 기본적인 
     // println(변수값)의 형식으로는 변수값이 전체가 불러져 오지 않는다. 어떻게 하면 변수 값을 모두 출력 가능할지 알아보자.
 
 
+    // chap 47. class , 클래스
+
+    //package ex_class
+
+    //class Person {
+        var name : String = ""
+        var age : Int = 0
+    //}
 
 
+    //fun main(args: Array<String>) {
+
+    //    var person : Person
+    //    person = Person()
+    //    person.name = "홍길동"
+    //    person.age = 36
+
+    //    val person2 : Person
+    //    person = Person()
+    //    person.name = "오태식"
+    //    person.age = 29
+
+    //    val person3 : Person
+    //    person = Person()
+    //    person.name = "황조롱이"
+    //    person.age = 17
+
+    // 클래스 단원은 위의 코드처럼 여러 객체를 만들고 싶을 때 한번에 대량 생산 가능하게 한다.
+    // 변수 <- 값 1개 = 변수선언
+    // 변수 <- 값 여러개 = 객체생성
+    // 객체 x n = 클래스 생성
+    // 요런느낌으로 이해하면 될 거 같다.
+
+
+    }
 
 
 }
